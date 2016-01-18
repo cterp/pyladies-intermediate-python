@@ -7,3 +7,4 @@ solutions/.cache/v/cache/lastfailed
 *.png
 *.jpg
 .*
+!/.gitignore
