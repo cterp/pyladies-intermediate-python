@@ -6,4 +6,4 @@ solutions/.cache/v/cache/lastfailed
 *.pyc
 *.png
 *.jpg
-.cache*
+.*
