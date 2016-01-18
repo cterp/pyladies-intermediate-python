@@ -1,0 +1,8 @@
+*.pptx
+*.docx
+*__pycache__/*
+exercises/.cache
+solutions/.cache
+*.pyc
+*.png
+*.jpg

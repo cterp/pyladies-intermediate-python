@@ -1,0 +1,6 @@
+{
+  "list_comprehensions.py::test_by_five": true, 
+  "list_comprehensions.py::test_double": true, 
+  "list_comprehensions.py::test_e_present": true, 
+  "list_comprehensions.py::test_odd": true
+}
