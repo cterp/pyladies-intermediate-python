@@ -9,5 +9,5 @@ To install pytest on a Mac/Unix machine, in your terminal type: ```$ pip install
 
 ### Using pytest
 There are (at least) two ways to run a Python program that uses pytest from the terminal:
-	1. ```$ python -m pytest my_program.py```
-	2. ```$ py.test my_program.py```
+1. ```$ python -m pytest my_program.py```
+2. ```$ py.test my_program.py```
