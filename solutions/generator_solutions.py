@@ -60,7 +60,7 @@ def test_gen():
 
 def test_gen_expressions():
 
-	# Exercise 1
+	# Exercise 4
 	# Create a generator expression that generates the
 	# numbers from 1 up to and including 5
 	# ================================
@@ -74,7 +74,7 @@ def test_gen_expressions():
 	assert pytest.raises(StopIteration, next, to_five)
 
 
-	# Exercise 2
+	# Exercise 5
 	# Write a generator expression that generates the squares 
 	# of the numbers from 1 up to and including 10
 	# ================================
@@ -83,7 +83,7 @@ def test_gen_expressions():
 	assert list(squares_to_ten) == [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
 
 
-	# Exercise 3
+	# Exercise 6
 	# Use a generator expression to compute the sum of the digits 1-100.
 	# Hint: write a generator expression and use it with sum().
 	# ================================
@@ -91,13 +91,14 @@ def test_gen_expressions():
 	assert isinstance(gen_sum, types.IntType)
 	assert gen_sum == 5050
 
-    # Exercise 4
-    # Use a generator expression to create a dictionary where the 
-    # keys are the numbers 0-5 and each key's value is the square of 
-    # the key.
-    # Sample output: {1: 1, 3: 9, ...}
-    # Hint: wrap your expression with dict()
-    # ================================
+
+	# Exercise 7
+	# Use a generator expression to create a dictionary where the 
+	# keys are the numbers 0-5 and each key's value is the square of 
+	# the key.
+	# Sample output: {1: 1, 3: 9, ...}
+	# Hint: wrap your expression with dict()
+	# ================================
 	dict_gen = dict((i,i ** 2) for i in xrange(6))
 	assert isinstance(dict_gen, types.DictType)
 	assert dict_gen == {5: 25, 0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
