@@ -28,34 +28,6 @@ def find_cubes(n=5):
 		yield i ** 3
 
 
-def test_gen():
-	# Exercise 1 tests
-	first_gen = one_then_two()
-	assert isinstance(first_gen, types.GeneratorType)
-	assert next(first_gen) == 1
-	assert next(first_gen) == 2
-	assert pytest.raises(StopIteration, next, first_gen)
-
-
-	# Exercise 2 tests
-	second_gen = gen_sequence()
-	assert isinstance(first_gen, types.GeneratorType)
-	assert list(second_gen) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-	assert pytest.raises(StopIteration, next, second_gen)
-
-	second_gen = gen_sequence(15)
-	assert isinstance(first_gen, types.GeneratorType)
-	assert list(second_gen) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
-	assert pytest.raises(StopIteration, next, second_gen)
-
-
-	# Exercise 3 tests
-	cubes = find_cubes()
-	assert isinstance(cubes, types.GeneratorType)
-	assert list(cubes) == [1, 8, 27, 64, 125]
-	assert pytest.raises(StopIteration, next, cubes)
-
-
 # GENERATOR EXPRESSIONS
 
 def test_gen_expressions():
@@ -103,6 +75,33 @@ def test_gen_expressions():
 	assert isinstance(dict_gen, types.DictType)
 	assert dict_gen == {5: 25, 0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 
+
+def test_gen():
+	# Exercise 1 tests
+	first_gen = one_then_two()
+	assert isinstance(first_gen, types.GeneratorType)
+	assert next(first_gen) == 1
+	assert next(first_gen) == 2
+	assert pytest.raises(StopIteration, next, first_gen)
+
+
+	# Exercise 2 tests
+	second_gen = gen_sequence()
+	assert isinstance(first_gen, types.GeneratorType)
+	assert list(second_gen) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	assert pytest.raises(StopIteration, next, second_gen)
+
+	second_gen = gen_sequence(15)
+	assert isinstance(first_gen, types.GeneratorType)
+	assert list(second_gen) == [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+	assert pytest.raises(StopIteration, next, second_gen)
+
+
+	# Exercise 3 tests
+	cubes = find_cubes()
+	assert isinstance(cubes, types.GeneratorType)
+	assert list(cubes) == [1, 8, 27, 64, 125]
+	assert pytest.raises(StopIteration, next, cubes)
 
 
 
