@@ -60,3 +60,21 @@ def test_iterator_3():
 # Note about reversed():
 # The sequence given to the reversed() iterator must be an object that has a
 # __reversed__() method, or has both a __len__() and __getitem__() method.
+
+
+# Exercise 4
+# Write a function that merges together two iterables to form
+# a list of tuples. The first items from each iterable form a single
+# tuple as the first value, all second items become part of the second
+# tuple, etc.
+# Sample output: [(0,0), (1,1), (2,2), ...] 
+# Hint: use zip()
+# ================================
+
+def iterator_4():
+	return zip(range(3), range(5))  
+	# notice that the resulting sequence contains the same number of values as the shortest sequence
+
+def test_iterator_4():
+	my_iter = list(iterator_4())
+	assert my_iter == [(0,0), (1,1), (2,2)]

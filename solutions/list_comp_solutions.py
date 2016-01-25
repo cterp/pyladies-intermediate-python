@@ -24,13 +24,13 @@ def test_odd():
 
 # Exercise 3
 # Use list comprehension to create a function that finds
-# the elements divisible by 5 in a sequence of numbers
+# the elements divisible by 3 and 5 in a sequence of numbers
 # ================================
 def by_five(sequence):
-	return [i for i in sequence if i % 5 == 0]
+	return [i for i in sequence if i % 3 == 0 and i % 5 == 0]
 
 def test_by_five():
-	assert by_five(range(1,31)) == [5,10,15,20,25,30]
+	assert by_five(range(1,31)) == [15, 30]
 
 
 # Exercise 4
@@ -46,11 +46,13 @@ def test_e_present():
 
 # Exercise 5
 # Use list comprehension to display the index position in front of each element
-# of a list.
+# of a list. For example, say you're given the list ["zero", "one", "two"]. 
+# The output of your list comprehension would be ['0: zero', '1: one', '2: two']
 # 
-# Hint 1: write a function that accepts the index position and element of each item
+# Hint 1: use helper functions
+# Hint 2: write a function that accepts the index position and element of each item
 # in the list, and formats the element into the form 'index: element'
-# Hint 2: use enumerate() in the iterator of the list comprehension
+# Hint 3: use enumerate() in the iterator portion of the list comprehension
 # ================================
 
 def treat(index, element):
