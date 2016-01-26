@@ -2,6 +2,9 @@
 ![PyLadies Logo](logo.jpeg)
 ## January 28, 2016
 
+## Version
+The modules were written using Python 2.7.
+
 ## pytest
 These programs make use of the testing framework ```pytest```. See the [pytest](http://pytest.org/latest/) website for more information.
 
