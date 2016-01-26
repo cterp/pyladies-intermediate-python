@@ -57,8 +57,8 @@ def test_lambdas():
     # Hint 1: use a list comprehension to create a list of the individual characters.
     # Hint 2: sort() is useful, as is its "key" parameter.
     # ================================
-    string = '0912542'
-    data = [x for x in string]
+    some_string = '0912542'
+    data = [x for x in some_string]
     data.sort(key=lambda x: int(x))
     assert data == ['0', '1', '2', '2', '4', '5', '9']
 
