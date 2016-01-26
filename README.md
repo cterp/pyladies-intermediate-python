@@ -6,7 +6,7 @@
 These programs make use of the testing framework ```pytest```. See the [pytest](http://pytest.org/latest/) website for more information.
 
 ### Installing pytest
-To install pytest on a Mac/Unix machine, in your terminal type: 
+To install pytest on a Mac/Unix machine, in your terminal type: <br>
 ```$ pip install pytest```
 
 ### Using pytest
