@@ -10,36 +10,35 @@ import time
 
 # Exercise 1
 # Step 1: write a function called "print_message" 
-# that prints the word "Hello!"
+# that prints the phrase "Python is awesome!"
 #
-# Step 2: Write a decorator called "noisy" that prints
-# the word "before" before the wrapped function is
-# invoked, prints "Hello!" when the function is 
-# invoked, and "after" after the function is
-# invoked. If you like, also print the function's name 
-# during the calls by using the __name__ attribute.
+# Step 2: Write a decorator called "spam" that prints
+# the phrase "Ministry of Silly Walks" before the wrapped 
+# function is called, prints "Python is awesome!" when 
+# the function you wrote in Step 1 is 
+# called, and "Pining for the fjords" after this. 
 #
-# Step 3: invoke your decorator by calling print_message()
+# Step 3: apply your decorator to print_message()
 #
 # Output will look like the following 3 lines:
-# before print_message
-# Hello!
-# after print_message
+# Ministry of Silly Walks
+# Python is awesome!
+# Pining for the fjords
 # ================================
 
 print "Exercise 1 output:"
 
-def noisy(func):
-    def inner_function():
-        print "before", func.__name__
-        result = func()
-        print "after", func.__name__
+def spam(func):
+    def inner_function(*args, **kwargs):
+        print "Ministry of Silly Walks"
+        result = func(*args, **kwargs)
+        print "Pining for the fjords"
         return result
     return inner_function
 
-@noisy
+@spam
 def print_message():
-    print "Hello!"
+    print "Python is awesome!"
 
 print_message()
 
@@ -48,36 +47,20 @@ print "--------------------------"  # separate exercise output
 
 # Exercise 2
 # 
-# Rewrite your "noisy" decorator so that it 
-# accepts variable and variable keyword arguments.
+# Write a decorator that returns the product of two numbers.
+# Step 1: write a function that returns the product of two numbers.
+# Step 2: write a decorator that prints a message before and after
+# your function is executed.
 # ================================
-
 print "Exercise 2 output:"
 
 def noisy(func):
     def inner_function(*args, **kwargs):
-        print "before", func.__name__
+        print "before " + func.__name__
         result = func(*args, **kwargs)
-        print "after", func.__name__
+        print "after " + func.__name__
         return result
     return inner_function
-
-@noisy
-def print_message():
-    print "Hello there!"
-
-print_message()
-
-print "--------------------------"  # separate exercise output
-
-
-# Exercise 3
-# 
-# Write a decorator that returns the product of two numbers.
-# Step 1: write a function that returns the product of two numbers.
-# Hint/step 2: can you re-use the decorator you wrote for Exercise 2?
-# ================================
-print "Exercise 3 output:"
 
 @noisy
 def mult(x,y):
@@ -87,7 +70,7 @@ print mult(3,6)
 
 print "--------------------------"  # separate exercise output
 
-# Exercise 4
+# Exercise 3
 # 
 # Write a decorator that outputs the time a function takes to execute.
 # Step 1: Write a function that does anything you like. Suggestion: append
@@ -96,7 +79,7 @@ print "--------------------------"  # separate exercise output
 # step 1 to run. Hint: time.time(); the time module has already been 
 # imported.
 # ================================
-print "Exercise 4 output:"
+print "Exercise 3 output:"
 
 def timing_function(decorated_function):
     def decorating_function():
@@ -119,7 +102,7 @@ print append_nums_to_list()
 print "--------------------------"
 
 
-# Exercise 5
+# Exercise 4
 # Use a decorator to simulate rate-limiting. That is, have the decorator
 # wait before invoking the wrapped function.
 #
@@ -128,6 +111,8 @@ print "--------------------------"
 # calling the function from step 1. 
 # Hint: time.sleep() will be useful.
 # ================================
+print "Exercise 4 output:"
+
 def rate_limit(decorated_function):
     def decorating_function(*args, **kwargs):
         time.sleep(1)
