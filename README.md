@@ -1,4 +1,4 @@
-# Pyladies TalkNight: Intermediate Python
+# PyLadies TalkNight: Intermediate Python
 ![PyLadies Logo](logo.jpeg)
 ## January 28, 2016
 
